@@ -73,7 +73,7 @@ def meme_price_change(name,db,price)
 end
 
 #Method to change a meme previous price given a name
-def meme_price_change(name,db,price)
+def meme_previousprice_change(name,db,price)
   id = meme_id_return(name)
   db.execute(
     'UPDATE Meme SET PreviousPrice = ? WHERE Meme_ID = ?',
