@@ -1,8 +1,11 @@
 require 'rubygems'
 require 'sinatra'
+require 'sinatra/activerecord'
+require './environments'
 require 'json'
 require 'omniauth'
 require 'omniauth-twitter'
+
 
 class SinatraApp < Sinatra::Base
   configure do

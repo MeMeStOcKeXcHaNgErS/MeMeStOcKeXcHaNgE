@@ -1,7 +1,10 @@
 #The Database editing file
 
 #Importing stuff
-require 'sqlite3'
+require 'sinatra'
+require 'sinatra/activerecord'
+require './environments'
+
 
 @Exchangedb = SQLite3::Database.new('MemeExchange.db')
 
