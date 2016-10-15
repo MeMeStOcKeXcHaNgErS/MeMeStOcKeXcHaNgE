@@ -23,6 +23,10 @@ class SinatraApp < Sinatra::Base
     erb :index
   end
 
+  get '/meme' do
+    erb :meme
+  end
+
   get '/auth/:provider/callback' do
     erb "<h1>#{params[:provider]}</h1>
          <pre>#{JSON.pretty_generate(request.env['omniauth.auth'])}</pre>"
