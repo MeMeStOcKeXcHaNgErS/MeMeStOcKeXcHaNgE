@@ -14,7 +14,7 @@ class SinatraApp < Sinatra::Base
   end
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
   use OmniAuth::Builder do
-    provider :twitter, 'cO23zABqRXQpkmAXa8MRw', 'TwtroETQ6sEDWW8HEgt0CUWxTavwFcMgAwqHdb0k1M'
+    provider :twitter, '6eNbUKEZgr7q29zzvoCPE6f4Y', 'dV4eRYVRa6GocxlpCfZgK9Co7cBLv7isQxlYwoLUuiXOs7lOjk'
     #provider :att, 'client_id', 'client_secret', :callback_url => (ENV['BASE_DOMAIN']
 
   end
