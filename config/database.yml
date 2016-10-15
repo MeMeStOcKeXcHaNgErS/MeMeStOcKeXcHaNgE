@@ -1,6 +1,5 @@
 development:
   adapter: postgresql
-  database: development
-  username: <%= ENV['PG_USER'] %>
-  password: <%= ENV['PG_PASS'] %>
-  host: esinwtech01574.asia.bankofamerica.com
+  host: localhost
+  username: user
+  database: app-dev
