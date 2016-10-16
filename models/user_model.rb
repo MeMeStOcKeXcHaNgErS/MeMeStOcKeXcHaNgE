@@ -23,16 +23,6 @@ class UserModel
   end
 
   #Class Method
-  def self.of_branch(b_identifier)
-    if b_identifier.nil?
-      @records_with_branch = UserModel.all_users
-    else
-      @records_with_branch = $database.execute('SELECT * FROM users WHERE branchID=?;', b_identifier)
-    end
-    @records_with_branch
-  end
-
-  #Class Method
   def self.is_member(a_handle)
     !(UserModel.new(a_handle).record.nil?)
   end
