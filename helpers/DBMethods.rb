@@ -3,8 +3,7 @@
 #Importing stuff
 require 'sinatra'
 require 'sinatra/activerecord'
-require './environments'
-
+require 'sqlite3'
 
 @Exchangedb = SQLite3::Database.new('MemeExchange.db')
 
@@ -16,7 +15,7 @@ require './environments'
 
 #Return Meme_ID method
 def meme_id_return(name)
-  if name.eql?('Doge')
+  if name.eql?("Doge")
     return 01
   elsif name.eql?('Harambe')
     return 02
@@ -29,6 +28,7 @@ def meme_id_return(name)
   else
     puts "error shit"
     return "error"
+  end	
 end
 
 #Method to return a meme name given name 
