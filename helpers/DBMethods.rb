@@ -16,14 +16,19 @@ require './environments'
 
 #Return Meme_ID method
 def meme_id_return(name)
-  if name.eql?('Harambe')
+  if name.eql?('Doge')
     return 01
-  elsif name.eql?('Pepe')
+  elsif name.eql?('Harambe')
     return 02
+  elsif name.eql?('Pepe')
+    return 03
+  elsif name.eql?('Spongebob')
+    return 04
+  elsif name.eql?('Xzibit')
+    return 05
   else
-    puts 'invlaid name'
-	return 'error'
-  end
+    puts "error shit"
+    return "error"
 end
 
 #Method to return a meme name given name 
@@ -35,7 +40,7 @@ def meme_name_return(name,db)
   )
   return memename
 end
-0
+
 #Method to return a meme description given a name
 def meme_description_return(name,db)
   id = meme_id_return(name)
