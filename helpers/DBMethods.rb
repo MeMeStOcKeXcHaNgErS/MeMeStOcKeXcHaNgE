@@ -5,7 +5,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sqlite3'
 
-@Exchangedb = SQLite3::Database.new('MemeExchange.@Exchangedb')
+$Exchangedb = SQLite3::Database.new('MemeExchange.db')
 
 #Names:
 #Harambe
@@ -17,7 +17,7 @@ require 'sqlite3'
 
 #Method to return a meme description given a name
 def meme_description_return(name)
-  memedscript = @Exchangedb.execute(
+  memedscript = $Exchangedb.execute(
     'SELECT Description FROM Meme WHERE Name = ?',
     [name]
   )
@@ -26,7 +26,7 @@ end
 
 #Method to return a meme current price given a name
 def meme_currentprice_return(name)
-  memecurrentprice = @Exchangedb.execute(
+  memecurrentprice = $Exchangedb.execute(
     'SELECT Price FROM Meme WHERE Name = ?',
     [name]
   )
@@ -35,7 +35,7 @@ end
 
 #Method to return a meme previous price given a name
 def meme_previousprice_return(name)
-  memepreviousprice = @Exchangedb.execute(
+  memepreviousprice = $Exchangedb.execute(
     'SELECT PreviousPrice FROM Meme WHERE Name = ?',
     [name]
   )
@@ -44,7 +44,7 @@ end
 
 #Method to change a meme price given a name
 def meme_price_change(name,price)
-  @Exchangedb.execute(
+  $Exchangedb.execute(
     'UPDATE Meme SET Price = ? WHERE Name = ?',
 	[price,name]
   )
@@ -52,7 +52,7 @@ end
 
 #Method to change a meme previous price given a name
 def meme_previousprice_change(name,price)
-  @Exchangedb.execute(
+  $Exchangedb.execute(
     'UPDATE Meme SET PreviousPrice = ? WHERE Name = ?',
 	[price,name]
   )
@@ -62,7 +62,7 @@ end
 
 #Method to retrive account money
 def account_money(name)
-    money = @Exchangedb.execute(
+    money = $Exchangedb.execute(
     'SELECT AccountMoney FROM Users WHERE UserName = ?',
 	[name]
   )
@@ -71,7 +71,7 @@ end
 
 #Method to update account money
 def account_money_update(name,money)
-   @Exchangedb.execute(
+   $Exchangedb.execute(
     'UPDATE Users SET AccountMoney = ? WHERE Name = ?',
 	[money,name]
   )
