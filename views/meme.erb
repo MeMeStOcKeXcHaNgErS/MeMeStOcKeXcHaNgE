@@ -65,6 +65,7 @@
 		  <%= @meme_description%>
            </p>
 			<form action="meme/transaction" method="post">
+				<input name="name_of_meme" type="hidden" value="<%=params[:meme_name]%>"/>
 				<input name="transaction_amount" type="number" step="10" />
 				<input name="make_transaction" type="submit" />
 			</form>
