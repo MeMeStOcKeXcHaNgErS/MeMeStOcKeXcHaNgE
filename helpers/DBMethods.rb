@@ -123,10 +123,38 @@ def meme_buy_sell(user,meme,stock)
   end
 end
 	
-	
+#Signing up
 
+def new_account(user)
+  $database.execute('INSERT INTO Users VALUES (?,?)',
+    [user,5000]
+	)
+end
 
-#TESTING CODE
-#cool = gets.chomp
-
-#puts meme_idreturn(cool)
+def signIn(user)
+  exist = $database.execute(
+    'SELECT UserName FROM Users WHERE UserName = ?',
+	[user]
+	)
+  if exist == nil.to_a
+    puts "Already exists"
+  elsif exist[0][0] == user
+    new_account(user)
+  else
+    puts "I don't know!"
+end
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
