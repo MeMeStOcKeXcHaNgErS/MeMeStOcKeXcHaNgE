@@ -5,7 +5,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sqlite3'
 
-@Exchange@Exchangedb = SQLite3::Database.new('MemeExchange.@Exchangedb')
+@Exchangedb = SQLite3::Database.new('MemeExchange.@Exchangedb')
 
 #Names:
 #Harambe
