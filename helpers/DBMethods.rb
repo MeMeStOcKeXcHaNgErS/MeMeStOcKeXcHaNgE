@@ -110,7 +110,7 @@ def meme_buy_sell(user,meme,stock)
     #we do nothing :D
   else
 	#Updating stock
-	share_edit(user,meme,(stock+share_number(user,meme)
+	share_edit(user,meme,(stock+share_number(user,meme)))
 	#Updating cash
 	account_money_update(user,(account_money(name)-(stock*meme_currentprice_return(meme))))
   end
