@@ -1,7 +1,16 @@
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-require "rubygems"
-require 'example_omniauth_app'
+require 'rubygems'
+require 'sinatra'
+require './app'
+Dir.glob('./{models,helpers,controllers}/*.rb').each { |file| require file }
 
-map '/' do
-  Rack::Handler.default.run(SinatraApp, :Port => 4567)
+map "/" do
+  run MemeStockExchangeApp
+end
+
+map "/meme" do
+  run MemeController
+end
+
+map "/user" do
+  run UserController
 end

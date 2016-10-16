@@ -1,10 +1,12 @@
-# A sample Gemfile
-source "http://rubygems.org"
-gem 'sinatra'
+source "https://rubygems.org"
+
+gem "sinatra"
+gem "activerecord"
+gem "sinatra-activerecord"
+gem "pg"
+gem 'activerecord-postgresql-adapter'
+gem "postgres-pr"
 gem 'thin'
 gem 'twitter'
 gem 'omniauth-twitter'
-gem 'sqlite3'
 gem 'omniauth'
-gem 'minitest'
-# gem "rails"

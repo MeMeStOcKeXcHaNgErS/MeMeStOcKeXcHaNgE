@@ -10,37 +10,18 @@
 
 header {
   background-color: red;
-  font-size: 3em;
 }
 
-/* prototype nav bar */
-
-nav {
-  background-color: orange;
-  font-size: 0.5em;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0.5em 5%;
-  padding: 0 5%;
-}
-
-nav ul li a {
-  color: black;
-}
 
 /* make main have a border */
 main {
   margin: 1em auto;
 }
 
+iframe {
+	height: 400px;
+}
+ 
 body {
     background-color: white;
 }
@@ -61,7 +42,7 @@ footer {
 
 /* apply two column layout on wide screens */
 @media screen and (min-width: 800px) {
-  main content {
+  main #content {
 	float: left;
 	width: 50%;
 	border: 1px black solid;
@@ -70,7 +51,7 @@ footer {
   main aside {
 	float: right;
 	border: 1px black solid;
-	width: 35%;
+	width: 45%;
 	margin-bottom: 1em;
   }
 }
