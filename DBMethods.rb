@@ -83,7 +83,16 @@ def meme_previousprice_change(name,db,price)
 	[price,id]
   )
 end
-  
+
+#Methods to edit the user account data
+
+#Method to retrive account money
+def account_money(name,db)
+    db.execute(
+    'UPDATE Meme SET Price = ? WHERE Meme_ID = ?',
+	[price,id]
+  )
+
 
 
 
