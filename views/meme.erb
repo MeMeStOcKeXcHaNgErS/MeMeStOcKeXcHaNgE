@@ -43,7 +43,9 @@
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="../auth/twitter">Login</a></li>
+					<li><a href="../user">User Portfolio</a>
+					</li>
+					<li><a id="login_logout" href="<%=(session[:authenticated] ? '/logout">Logout' : '/auth/twitter">Login With Twitter') %></a></li>
 				</ul>
 			</div>
 		</nav>
