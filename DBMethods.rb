@@ -32,7 +32,7 @@ def meme_name_return(name,db)
   )
   return memename
 end
-
+0
 #Method to return a meme description given a name
 def meme_description_return(name,db)
   id = meme_id_return(name)
