@@ -78,6 +78,24 @@ def account_money_update(name,money)
 end
 
 
+#Methods to access meme shares
+
+#Method to access number of a given meme share given username
+def share_number(user,meme)
+  stockNo = $database.execute(
+    'SELECT Meme_NO FROM MemeShares WHERE UserName = ? && Name = ?',
+	[user,meme]
+  )
+  return stockNo
+end
+
+#Method to change share count of a given meme and username
+def share_edit(user,meme,stock)
+     $database.execute(
+    'UPDATE MemeShares SET Meme_NO = ? WHERE UserName = ? && Name = ?',
+	[stock,user,meme]
+  )
+end
 
 
 #TESTING CODE
