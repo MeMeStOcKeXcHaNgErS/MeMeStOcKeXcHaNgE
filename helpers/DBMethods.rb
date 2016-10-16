@@ -98,6 +98,26 @@ def share_edit(user,meme,stock)
 end
 
 
+#Higher Level Methods
+
+#Buy 1 meme
+def meme_buy_sell(user,meme,stock) 
+  if account_money(name) < (meme_currentprice_return(meme)*stock)
+	return "error not enough money"
+  elsif  share_number(user,meme) + stock < 0
+	return "error not enough stock to sell"
+  elsif stock == 0
+    #we do nothing :D
+  else
+	#Updating stock
+	share_edit(user,meme,(stock+share_number(user,meme)
+	#Updating cash
+	account_money_update(user,(account_money(name)-(stock*meme_currentprice_return(meme))))
+end
+	
+	
+
+
 #TESTING CODE
 #cool = gets.chomp
 
