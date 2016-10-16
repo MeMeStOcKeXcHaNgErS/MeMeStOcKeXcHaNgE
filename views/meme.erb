@@ -64,6 +64,8 @@
           <p>
 		  <%= @meme_description%>
            </p>
+		   <iframe width="100%" class = "not_big" src="<%="../meme/frame?meme_name=" + params[:meme_name]%>"></iframe>
+		   <p>You own <%=@users_share%> of <%=params[:meme_name] %></p>
 			<form action="meme/transaction" method="post">
 				<input name="name_of_meme" type="hidden" value="<%=params[:meme_name]%>"/>
 				<input name="transaction_amount" type="number" step="10" />
