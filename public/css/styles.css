@@ -21,6 +21,10 @@ main {
 iframe {
 	height: 400px;
 }
+
+.not_big {
+	height: 50px;
+}
  
 body {
     background-color: white;

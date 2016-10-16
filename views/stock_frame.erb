@@ -1,3 +1,6 @@
+<html>
+<head>
+<meta http-equiv="refresh" content="6">
 <script>
      var time = new Date().getTime();
      $(document.body).bind("mousemove keypress", function(e) {
@@ -5,12 +8,16 @@
      });
 
      function refresh() {
-         if(new Date().getTime() - time >= 60000) 
+         if(new Date().getTime() - time >= 30000) 
              window.location.reload(true);
          else 
-             setTimeout(refresh, 10000);
+             setTimeout(refresh, 30000);
      }
 
-     setTimeout(refresh, 10000);
+     setTimeout(refresh, 30000);
 </script>
-<%=
+</head>
+<body>
+<%=params[:meme_name]%> is worth &#128076;<%=meme_currentprice_return(params[:meme_name]).to_s%>
+</body>
+</html>

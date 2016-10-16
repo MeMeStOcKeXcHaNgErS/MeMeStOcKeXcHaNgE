@@ -85,6 +85,10 @@ end
 
 #Method to access number of a given meme share given username
 def share_number(user,meme)
+  puts "cats"
+  puts user 
+  puts meme
+  puts "dogs"
   stockNo = $database.execute(
     'SELECT Meme_NO FROM MemeShares WHERE UserName = ? AND Name = ?',
 	[user,meme]
