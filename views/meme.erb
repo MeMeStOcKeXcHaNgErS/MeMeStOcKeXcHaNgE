@@ -64,7 +64,7 @@
           <p>
 		  <%= @meme_description%>
            </p>
-			<form method="post">
+			<form action="meme/transaction" method="post">
 				<input name="transaction_amount" type="number" step="10" />
 				<input name="make_transaction" type="submit" />
 			</form>
