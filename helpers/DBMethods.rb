@@ -88,10 +88,20 @@ end
 
 #Method to retrive account money
 def account_money(name,db)
-    db.execute(
-    'UPDATE Meme SET Price = ? WHERE Meme_ID = ?',
-	[price,id]
+    money = db.execute(
+    'SELECT AccountMoney FROM Users WHERE UserName = ?',
+	[name]
   )
+  return money
+end
+
+#Method to update account money
+def account_money_update(name,db,money)
+   db.execute(
+    'UPDATE Users SET AccountMoney = ? WHERE Name = ?',
+	[money,name]
+  )
+end
 
 
 
