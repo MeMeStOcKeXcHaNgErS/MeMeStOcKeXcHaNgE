@@ -41,7 +41,7 @@ class AppController < Sinatra::Base
   before do
     #Instantiate the twitter client.
     $client = Twitter::REST::Client.new(config)
-    #Initialize Database If Empty
-    #TODO
+    #Instantiate the database.
+    $database = SQLite3::Database.new './MemeExchange.db'
   end
 end
