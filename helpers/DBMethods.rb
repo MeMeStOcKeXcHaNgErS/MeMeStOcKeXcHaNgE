@@ -8,6 +8,7 @@ require 'sqlite3'
 #Names:
 #Harambe
 #Pepe
+#doge
 
 #Methods for Memes
 
