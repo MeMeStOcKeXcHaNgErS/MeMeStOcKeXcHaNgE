@@ -142,9 +142,8 @@ def signIn(user)
     new_account(user)
   else
     puts "I don't know!"
+  end
 end
-  
-  
   
   
   
